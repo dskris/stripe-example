@@ -34,17 +34,21 @@ class PaymentController extends Controller
 	    else if ($type == 'task2')
 	    {
 	    	return Validator::make($data, [
-	            /*'plan_name' => 'required',
-	            'currency' => 'required',
-	            'amount' => 'required|numeric',*/
+	            'plan_name' => 'required',
+	            'plan_currency' => 'required',
+	            'plan_amount' => 'required|numeric',
+	            'plan_interval' => 'required',
+	            'plan_id' => 'required',
 	        ],$messages);
 	    }
 	    else if ($type == 'task3')
 	    {
 	    	return Validator::make($data, [
-	            /*'plan_name' => 'required',
-	            'currency' => 'required',
-	            'amount' => 'required|numeric',*/
+	            'card_no' => 'required',
+	            'ccExpiryMonth' => 'required|date_format:m',
+	            'ccExpiryYear' => 'required|date_format:Y',
+	            'cvvNumber' => 'required|numeric|min:3',
+	            'amount' => 'required|numeric',
 	        ],$messages);
 	    }
     }
