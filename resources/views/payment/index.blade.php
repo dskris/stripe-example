@@ -103,7 +103,7 @@
                 success: function (status) {
                     var result = JSON.parse(status);
                     if(result.status){
-                        $('.error').html('successful payment to stripe!');
+                        $('.error').html(result.message);
                     }else{
                         $("#submitPaymentButton").prop("disabled",false);
                         $('.error').html(result.message);

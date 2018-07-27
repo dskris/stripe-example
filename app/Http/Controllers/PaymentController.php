@@ -92,7 +92,7 @@ class PaymentController extends Controller
                     /**
                     * Write Here Your Database insert logic.
                     */
-                    $result = array('status' => false,'message' => 'Transaction Successful', 'code' => '');
+                    $result = array('status' => false,'message' => $charge, 'code' => '');
                 } else {
                     $result = array('status' => false,'message' => 'Transaction Not Successful', 'code' => '');
                 }
@@ -149,7 +149,7 @@ class PaymentController extends Controller
                     /**
                     * Write Here Your Database insert logic.
                     */
-                    $result = array('status' => false,'message' => $response, 'code' => '');
+                    $result = array('status' => true,'message' => $response, 'code' => '');
                 } else {
                     $result = array('status' => false,'message' => 'Transaction Not Successful', 'code' => '');
                 }
@@ -218,7 +218,7 @@ class PaymentController extends Controller
                     /**
                     * Write Here Your Database insert logic.
                     */
-                    $result = array('status' => false,'message' => 'Subscription Successful', 'code' => '');
+                    $result = array('status' => true,'message' => $subscription, 'code' => '');
                 } else {
                     $result = array('status' => false,'message' => 'Subscription Not Successful', 'code' => '');
                 }
